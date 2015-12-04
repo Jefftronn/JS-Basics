@@ -6,7 +6,15 @@ var name = 'Tyler';
 //If the argument you passed in is equal to 'Tyler', return true. If it's not, return false.
 
   //Code Here
+var isTyler = function(name) {
+  if (name === 'Tyler') {
+    return(true);
+  }
 
+  else {
+    return(false);
+  }
+}
 //Next problem
 
 
@@ -15,7 +23,10 @@ var name = 'Tyler';
 
 
   //Code Here
-
+var getName = function() {
+  var name = prompt("What is your name?");
+  return(name);
+}
 
 //Next Problem
 
@@ -25,7 +36,10 @@ var name = 'Tyler';
 //then alerts "Welcome, " plus whatever the users name is.
 
   //Code Here
-
+var welcome = function() {
+  var answer = getName();
+  alert("Welcome, " + answer);
+}
 
 //Next problem
 
@@ -36,6 +50,7 @@ var name = 'Tyler';
 
   //Answer Here
 
+/* Arguements are passed through functions and used as parameters while parameters are variables that can be declared and changed when put into a function. */
 
 //Next problem
 
@@ -46,7 +61,7 @@ var name = 'Tyler';
 
   //Answer Here
 
-
+/* The falsy values are null, NaN, "", 0, false, and undefined. To check for something that is falsy you have to compare the value with something that is true.*/
 
 //Next Problem
 
@@ -55,7 +70,9 @@ var name = 'Tyler';
 //Create a function called myName that returns your name
 
   //Code Here
-  
+var myName = function() {
+  return(name);
+}
 
 
 //Now save the function definition of myName into a new variable called newMyName
@@ -63,7 +80,7 @@ var name = 'Tyler';
   //Code Here
 
 //Now alert the result of invoking newMyName
-
+var newMyName = myName;
 
 
 //Next problem
@@ -74,8 +91,16 @@ var name = 'Tyler';
 
   //Code Here
 
+var outerFn = function() {
+  return function () {
+    return "Jeff"
+  }
+}
+
 //Now save the result of invoking outerFn into a variable called innerFn.
 
   //Code Here
+var innerFn = outerFn();
 
 //Now invoke innerFn.
+innerFn();
