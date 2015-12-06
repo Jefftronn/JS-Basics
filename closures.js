@@ -75,7 +75,11 @@ callFriend();
 var codeLove = function() {
   return('I love code');
 }
-
+var codeFriend = function() {
+  return function () {
+    
+  }
+}
 
 
 //Next Problem
