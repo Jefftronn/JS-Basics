@@ -34,7 +34,7 @@ var callFriend = function(){
 
   //Code Here
 var number = "435-215-9248";
-callFriend();
+callF = callFriend();
 
 //Next Problem
 
@@ -75,12 +75,13 @@ callFriend();
 var codeLove = function() {
   return('I love code');
 }
-var codeFriend = function() {
-  return function () {
-    
-  }
-}
 
+var codeFriend = function(codeLove) {
+      return function () {
+        return codeLove;
+      }
+}
+var codeEcho = codeFriend();
 
 //Next Problem
 
