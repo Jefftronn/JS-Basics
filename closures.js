@@ -81,7 +81,7 @@ var codeFriend = function(codeLove) {
         return codeLove;
       }
 }
-var codeEcho = codeFriend();
+var codeEcho = codeFriend(codeLove)();
 
 //Next Problem
 
@@ -141,3 +141,16 @@ var codeEcho = codeFriend();
 
   *Hint: Don't let this fool you. Break down what's really happening here.
 */
+var makeNumReturn = function(num) {
+  var myNumber = num;
+  return function() {
+    return myNumber;
+  }
+}
+
+var funcArray = [];
+
+for (var i = 0; i < 6; i++) {
+  var currentFunc = makeNumReturn(i)
+  funcArray.push(currentFunc);
+}
