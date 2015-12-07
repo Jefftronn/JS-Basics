@@ -77,11 +77,18 @@ var codeLove = function() {
 }
 
 var codeFriend = function(codeLove) {
+    var flag = false;
       return function () {
-        return codeLove;
+        if (flag) {
+          return null;
+        }
+        else {
+          flag = true;
+          return codeLove();
+        }
       }
 }
-var codeEcho = codeFriend(codeLove)();
+var codeEcho = codeFriend(codeLove);
 
 //Next Problem
 
